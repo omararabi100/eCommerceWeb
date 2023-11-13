@@ -5,10 +5,19 @@ import AppRoutes from './components/AppRoutes'
 import SideBar from './components/SideBar'
 
 function App() {
+    const [translateXValue, setTranslateXValue] = useState(0)
 
+    const showHide = () => {
+        if (translateXValue === 0) {
+            setTranslateXValue(-100)
+          } else {
+            setTranslateXValue(0)
+          }
+    }
     return (
         <div>
-            <NavBar />
+            <NavBar showHide={showHide}/>
+            <SideBar showHide={showHide} translateXValue={translateXValue}/>
             <div className='content'>
                 <AppRoutes />
             </div>
