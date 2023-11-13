@@ -24,6 +24,9 @@ a {
     width: 30px;    
     height: 30px;
 }
+.logo-container {
+    
+}
 /*----- Side Bar -----*/
 .link-container-side a {
     text-decoration: none;
@@ -42,7 +45,11 @@ a {
     display: flex;
     flex-direction: column;
 }
-.logo-list, .logo-side {
+.logo-list {
     width: 30px;
     height: 30px;
+}
+.logo-side {
+    width: 40px;
+    height: 40px;
 }

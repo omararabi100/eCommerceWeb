@@ -9,7 +9,6 @@ function App() {
     return (
         <div>
             <NavBar />
-            <SideBar />
             <div className='content'>
                 <AppRoutes />
             </div>
