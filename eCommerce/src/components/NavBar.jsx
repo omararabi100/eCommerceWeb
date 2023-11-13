@@ -1,9 +1,8 @@
-import React from 'react';
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import AppRoutes from './components/AppRoutes';
+import AppRoutes from './AppRoutes';
 
 function NavBar() {
-    const [count, setCount] = useState(0)
 
     return (
         <div className='nav-bar'>
