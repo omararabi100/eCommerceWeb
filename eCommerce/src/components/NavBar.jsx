@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
+import SideBar from './SideBar';
 
 function NavBar() {
 

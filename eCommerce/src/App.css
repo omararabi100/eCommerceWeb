@@ -24,3 +24,25 @@ a {
     width: 30px;    
     height: 30px;
 }
+/*----- Side Bar -----*/
+.link-container-side a {
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+}
+.side-bar {
+    position: absolute;
+    background-color: #777;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 25%;
+}
+.link-container-side {
+    display: flex;
+    flex-direction: column;
+}
+.logo-list, .logo-side {
+    width: 30px;
+    height: 30px;
+}
