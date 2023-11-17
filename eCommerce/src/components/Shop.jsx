@@ -5,7 +5,7 @@ function Shop() {
 
     return (
         <div className="shop-container">
-            <ItemList n={3} />
+            <ItemList n={8} />
         </div>
 );
 }
