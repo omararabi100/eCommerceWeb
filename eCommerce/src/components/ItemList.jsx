@@ -8,6 +8,7 @@ function ItemList({n}) {
             {products.slice(0,n).map((item,Index) =>(
             <Item 
             key={Index}
+            id={item.id}
             image={item.image}
             name={item.name}
             description={item.description}
