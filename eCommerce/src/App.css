@@ -11,8 +11,10 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    border-bottom: solid 2px black;
+    box-shadow: 3px 3px 25px black;
     height: 30px;
+    position: relative;
+    z-index: 10;
 }
 .link-container {
     display: flex;
@@ -50,11 +52,15 @@ a {
     padding-left: 10px;
     border-bottom: black 1px solid;
 }
+.link-container-side a:hover {
+    background-color: #888;
+}
 .link-container-side a:first-child {
     border-top: black 1px solid;
 }
 .side-bar {
     position: absolute;
+    z-index: 20;
     background-color: #ddd;
     height: 100%;
     top: 0;
@@ -68,7 +74,24 @@ a {
     flex-direction: column;
 }
 /*----- Home -----*/
-.featured {
-    background-image: linear-gradient(180deg, #70dbff, #fff);
-    height: 300px;
+.home-img-container {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
 }
+.home-img-container img {
+    width: 100%;
+    transform: translateY(0%);
+}
+.home-container h2 {
+    text-align: center;
+    margin: 20px
+}
+.home-container .item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/*----- Shop -----*/

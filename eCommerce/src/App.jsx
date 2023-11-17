@@ -5,8 +5,8 @@ import AppRoutes from './components/AppRoutes'
 import SideBar from './components/SideBar'
 
 function App() {
-    const [translateXValue, setTranslateXValue] = useState(0)
-
+    const [translateXValue, setTranslateXValue] = useState(-100)
+    
     const showHide = () => {
         if (translateXValue === 0) {
             setTranslateXValue(-100)
