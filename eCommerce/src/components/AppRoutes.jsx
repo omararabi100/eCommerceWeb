@@ -14,7 +14,7 @@ function AppRoutes() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
             <Route path="/product/:id" element={<Product />} />
         </Routes>
     );

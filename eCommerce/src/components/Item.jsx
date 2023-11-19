@@ -8,7 +8,7 @@ function Item({id, name, image, price, description}){
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-      };
+    };
     const product = {id:id}
     return(
         <Link to={`/product/${product.id}`}>

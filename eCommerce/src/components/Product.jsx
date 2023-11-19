@@ -2,12 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from "../products.js"
 
-function Product() {
+function Product({addToCart}) {
 
     const { id } = useParams();
 
     const product = products.find(product => product.id === parseInt(id, 10));
-
+    const addItem = (product) => {
+        addToCart(product)
+    }
     if (!product) {
         return <div>Product not found</div>;
     }
@@ -18,6 +20,7 @@ function Product() {
             <h2>{product.name}</h2>
             {/* <p>{price}</p>
             <p>{description}</p> */}
+            <button onClick={() => addItem(product)}>Add to Cart</button>
         </div>
     
     )
