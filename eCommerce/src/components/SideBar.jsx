@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import AppRoutes from './AppRoutes';
 
 function SideBar({translateXValue, showHide}) {
 

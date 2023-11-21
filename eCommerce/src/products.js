@@ -11,14 +11,14 @@ export const products = [
         image: "https://via.placeholder.com/150/92c952",
         name: "item 2",
         description: "",
-        price: "YOO1"
+        price: 500
     },
     {
         id: 3,
         image: "https://via.placeholder.com/150/92c952",
         name: "item 3",
         description: "description 1",
-        price: "YOO1"
+        price: 5000
     },
     {
         id: 4,

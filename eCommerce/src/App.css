@@ -3,22 +3,29 @@
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
 }
+.content {
+    margin-top:  60px;
+}
 /*----- Nav Bar -----*/
 .nav-bar {
     background-color: #fff;
-    padding: 15px;
+    padding: 7.5px 15px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-content: center;
     box-shadow: 3px 3px 25px black;
-    height: 30px;
-    position: relative;
+    min-height: 30px;
+    position: fixed;
     z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .link-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 a {
     text-decoration: none;
@@ -30,7 +37,8 @@ a {
     display: flex;
     align-items: center;
     height: 45px;
-    transform: translateY(-7px);
+    transform: translateY(-0px);
+
 }
 .logo-nav, .logo-side {
     width: 45px;    
@@ -44,13 +52,14 @@ a {
 /*----- Side Bar -----*/
 .side-bar .logo-container {
     margin-left: 15px;
+    padding: 7.5px 0px;
 }
 .link-container-side a {
     text-decoration: none;
     color: black;
     padding: 15px 0px;
     padding-left: 10px;
-    border-bottom: black 1px solid;
+    border-bottom: black 1px solid; 
 }
 .link-container-side a:hover {
     background-color: #888;
@@ -59,15 +68,16 @@ a {
     border-top: black 1px solid;
 }
 .side-bar {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     background-color: #ddd;
     height: 100%;
     top: 0;
     left: 0;
     width: 25%;
+    min-width: 200px;
     transform: translateX(0%);
-    padding-top: 15px;
+    overflow: hidden;
 }
 .link-container-side {
     display: flex;
@@ -181,3 +191,43 @@ margin-bottom: 15px;
     margin-top: 20px;
 }
 /*----- Product -----*/
+/*----- Cart -----*/
+.cart-container {
+    min-height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 80%;
+    min-width: 300px;
+    
+}
+.cart-items {
+    margin: 2px auto;
+    min-width: 300px;
+    border: black 1px solid;
+    width: 49%;
+    min-height: 300px;
+}
+.cart-container-right{
+    margin: 2px auto;
+    min-width: 300px;
+    border: black 1px solid;
+    width: 49%;
+}
+.add-quantity-btn, .remove-quantity-btn {
+    width: 20px;
+    height: 20px;
+}
+/*----- Overlay -----*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(15px);
+    z-index: 15;
+    display: none;
+}
