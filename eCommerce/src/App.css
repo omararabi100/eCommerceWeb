@@ -5,6 +5,7 @@
 }
 .content {
     margin-top:  60px;
+    min-height: 420px;
 }
 /*----- Nav Bar -----*/
 .nav-bar {
@@ -40,7 +41,7 @@ a {
     transform: translateY(-0px);
 
 }
-.logo-nav, .logo-side {
+.logo-nav, .logo-side, .logo-about {
     width: 45px;    
     height: 45px;
 }
@@ -90,20 +91,25 @@ a {
     width: 100%;
     overflow: hidden;
 }
-.home-img-container img {
+.home-img-container {
+    background-image: url('https://blog.snappa.com/wp-content/uploads/2020/01/wordpress-featured-image-size.jpg');
+    background-position: center;
+    height: 500px;
     width: 100%;
+    background-clip: content-box;
     transform: translateY(0%);
 }
 .home-container h2 {
     text-align: center;
     margin: 20px
 }
-.home-container .item-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.home-container {
+    margin-top: -20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
 }
+/*----- Item List -----*/
 /*----- Shop -----*/
 .shop-container{
     position: relative;
@@ -116,7 +122,6 @@ a {
 
 .shop-row .item-list {
     display: flex;
-
     overflow-x: scroll;
 }
 
@@ -148,14 +153,13 @@ a {
 }
 
 .shop-row .product .img  {
-height: 200px;
-width: 200px;   
-border-bottom: 2px solid black;
-box-shadow: 0px  2px 3px 1px black;
-border-radius: 8px;
-margin-bottom: 15px;
+    height: 200px;
+    width: 200px;   
+    border-bottom: 2px solid black;
+    box-shadow: 0px  2px 3px 1px black;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
-
 ::-webkit-scrollbar{
     width: 8px;
 }
@@ -191,6 +195,68 @@ margin-bottom: 15px;
     margin-top: 20px;
 }
 /*----- Product -----*/
+.bodybackground{
+    display: flex;
+    background-color: rgba(0, 0, 0,0.3);
+    justify-content: center;
+    height: 100%;
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: white;
+    padding-bottom: 2vh;
+    border: 1px solid black;
+}
+
+.product-container img{
+    display: flex;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 60%;
+    padding-right: 25%;
+}
+.textcontent{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+#pprice{
+    display: flex;
+
+    align-self: flex-end;
+    float: right;
+}
+.product-container h2 {
+    display: flex;
+
+    align-self: flex-start;
+    
+}
+#pdescription{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;  
+}
+.buttonp {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.buttonp:hover {
+    background-color: #444;
+}
 /*----- Cart -----*/
 .cart-container {
     min-height: 300px;
@@ -230,4 +296,108 @@ margin-bottom: 15px;
     backdrop-filter: blur(15px);
     z-index: 15;
     display: none;
+}
+/*----- Contact -----*/
+.contact {
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    margin-top: 90px;
+}
+
+.contact h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+
+.contact label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact button {
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #444;
+}
+
+.contact .status {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+/*----- Footer -----*/
+.footer {
+    width: 100%;
+    position: relative;
+    background-color: darkgrey  ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: black 1px solid;
+}
+  
+.footer-left,
+.footer-right {
+    width: 40%;
+    padding: 20px;
+}
+  
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.footer ul {
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+  
+.footer a:hover {
+    color: white;
 }

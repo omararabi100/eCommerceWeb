@@ -14,6 +14,7 @@ function Item({id, name, image, price, description}){
         <Link to={`/product/${product.id}`}>
             <div className="product">
                 <div className="img" style={imgStyle}></div>
+
                 <h2>{name}</h2>
                 <p>${price}</p>
                 <button className="button-product">Buy now</button>

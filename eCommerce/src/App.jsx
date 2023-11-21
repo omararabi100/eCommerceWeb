@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import Product from './components/Product';
+import Footer from './components/Footer';
 
 function App() {
     const [translateXValue, setTranslateXValue] = useState(-100)
@@ -40,7 +41,7 @@ function App() {
                 image: item.image,
             })
         }
-        setCartItems(tempCart);
+        setCartItems(tempCart)
         console.log(cartItems)
     };
     const updateItemQuantity = (item, amount) => {
@@ -76,6 +77,7 @@ function App() {
                     <Route path="/product/:id" element={<Product addToCart={addToCart} />} />
                 </Routes>
             </div>
+            <Footer />
             <div className="overlay" style={{display: overlay, transition: 'transform 0.5s ease'}}></div>
         </div>
     )

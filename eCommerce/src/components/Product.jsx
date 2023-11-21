@@ -14,14 +14,16 @@ function Product({addToCart}) {
         return <div>Product not found</div>;
     }
     return(    
-        <div className="product-container">
-            bruh
-            <img src={product.image} />
-            <h2>{product.name}</h2>
-            {/* <p>{price}</p>
-            <p>{description}</p> */}
-            <button onClick={() => addItem(product)}>Add to Cart</button>
-        </div>
+        <div className="bodybackground">
+      <div className="product-container">
+        <img src={product.image} />
+
+        <h2>{product.name}</h2>
+        <p id="pdescription">{product.description}</p> 
+        <p id="pprice">${product.price}</p>
+        <button className="buttonp" onClick={() => addItem(product)}>Add to Cart</button>
+      </div>
+    </div>
     
     )
 } 

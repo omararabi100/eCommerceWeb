@@ -7,19 +7,19 @@ function Shop() {
     <div className="shop-container">
         <h1>Laptops</h1>
         <div className="shop-row">
-            <ItemList n={8} />
+            <ItemList category={"laptops"} />
         </div>
         <h1>Keyboards</h1>
         <div className="shop-row">
-            <ItemList n={8} />
+            <ItemList category={"keyboards"} />
         </div>
-        <h1>Mouse</h1>
+        <h1>Mice</h1>
         <div className="shop-row">
-            <ItemList n={4} />
+            <ItemList category={"mice"} />
         </div>
         <h1>Headsets</h1>
         <div className="shop-row">
-            <ItemList n={4} />
+            <ItemList category={"headphones"} />
         </div>
     </div>
 );

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import { products } from "../products.js"
 
-function ItemList({n}) {
+function ItemList({category}) {
+    const [list, setList] = useState([])
+    useEffect(() => {
+        const tempList = []
+        products.forEach((product) => {
+            if (product.category == category) {
+                tempList.push(product)
+            }
+            setList(tempList)
+        })
+    }, [])
     return (
         <div className="item-list">
-            {products.slice(0,n).map((item,Index) =>(
+            {list.map((item,Index) =>(
             <Item 
             key={Index}
             id={item.id}
