@@ -72,12 +72,14 @@ function Cart({cartItems, updateItemQuantity, wallet, addMoneyToWallet, emptyCar
                 {cartItems.map((item,Index) =>(
                     <div className="cart-item" key={Index}>
                         <div className="cart-img" style={{backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center',}}></div>
-                        <div className="cart-description    ">
+                        <div className="cart-description ">
                             <h2>{item.name}</h2>
-                            <h3>Price: ${item.price}</h3>
-                            <button className="add-quantity-btn" onClick={() => updateItem(item, 1)}> + </button>
-                            <span> {item.quantity} </span>
-                            <button className="remove-quantity-btn" onClick={() => updateItem(item, -1)}> - </button>
+                            <div className="quantity-container">
+                                <h3>Price: ${item.price}</h3>
+                                <button className="add-quantity-btn" onClick={() => updateItem(item, 1)}> + </button>
+                                <span className="quantity"> {item.quantity} </span>
+                                <button className="remove-quantity-btn" onClick={() => updateItem(item, -1)}> - </button>
+                            </div>
                         </div>
                     </div>
                 ))}
@@ -87,10 +89,12 @@ function Cart({cartItems, updateItemQuantity, wallet, addMoneyToWallet, emptyCar
                 <h1>Wallet: ${wallet}</h1>
                 <h1>Discount: {discount}%</h1>
                 <h1>Discounted Price: ${(totalPrice*((100-discount)/100))}</h1>
-                <label htmlFor="input-code">Code</label>
-                <input type="text" value={code} onChange={(e) => {setCode(e.target.value)}}/> <br />
-                <button className="redeem-btn" onClick={redeem}>Redeem</button>
-                <button className="buy-btn" onClick={buy}>Buy</button>
+                <label htmlFor="input-code">Code: </label> 
+                    <input type="text" value={code} onChange={(e) => {setCode(e.target.value)}}/> <br />
+                <div>
+                    <button className="redeem-btn" onClick={redeem}>Redeem</button>
+                    <button className="buy-btn" onClick={buy}>Buy</button>
+                </div>
                 <p>{msg}</p>
             </div>
         </div>

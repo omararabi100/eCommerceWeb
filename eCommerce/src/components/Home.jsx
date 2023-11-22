@@ -6,12 +6,16 @@ function Home() {
     return (
         <div className="home-container">
             <div className="home-img-container"></div>
-            <h2>Trending Products</h2>
+            <h1>Trending Products</h1>
             <div className="shop-row">
-                <ItemList category={"laptops"} featured={true}/>
+                <ItemList category={"bundle"} featured={true}/>
+            </div>
+            <h1>Bundles</h1>
+            <div className="shop-row">
+                <ItemList category={"bundle"} />
             </div>
         </div>
     );
 }
 
-export default Home;
+export default Home

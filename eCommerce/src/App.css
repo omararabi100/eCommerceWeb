@@ -40,7 +40,7 @@ a {
     font-size: 2em;
 }
 .nav-bar a:hover{
-    color: #31BBD1;
+    color: #be1729;
 }
 .logo-container {
     display: flex;
@@ -71,7 +71,7 @@ a {
     border-bottom: black 1px solid; 
 }
 .link-container-side a:hover {
-    color: #31BBD1;
+    color: #be1729;
 }
 .link-container-side a:first-child {
     border-top: black 1px solid;
@@ -100,10 +100,12 @@ a {
     overflow: hidden;
 }
 .home-img-container {
-    background-image: url('https://blog.snappa.com/wp-content/uploads/2020/01/wordpress-featured-image-size.jpg');
-    background-position: center;
+    background-image: url('https://images.electronicexpress.com/slide-show.c/11-19-04-d-Consols.jpg');
+    background-position: left;
+    background-size: auto 100%;
     height: 500px;
     width: 100%;
+    background-repeat: no-repeat;
     background-clip: content-box;
     transform: translateY(0%);
 }
@@ -125,16 +127,20 @@ a {
     width: 100%;
     overflow: hidden;
     margin-top: 100px ;
-    margin-left: 30px;
-
-
 }
 
 .shop-row .item-list {
     display: flex;
     overflow-x: scroll;
 }
-
+.shop-container h1 {
+    margin-left: 30px;
+}
+.shop-row h2 {
+    overflow: scroll;
+    height: 60px;
+    font-size: large;
+}
 .shop-row .product {
     width: 200px;
     min-height: 10vh;
@@ -173,7 +179,7 @@ a {
   }
   
   .product:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Example box shadow on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
   
   .img {
@@ -190,14 +196,14 @@ a {
   }
   
   .product-price {
-    color: rgb(49, 187, 209);
+    color: #d31a2d;
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 5px;
   }
   
-  .button-product {
-    background-color: rgb(49, 187, 209);
+  .button-product, .buy-btn, .redeem-btn {
+    background-color: #d31a2d;
     color: #fff;
     padding: 8px 16px;
     font-size: 1em;
@@ -206,11 +212,18 @@ a {
     border-radius: 5px;
     cursor: pointer;
     align-self: center;
-    transition: background-color 0.3s ease-in-out;
   }
-  
+  .buy-btn , .redeem-btn {
+    width: 30%;
+  }
+  .buy-btn:hover, .redeem-btn:hover {
+    background-color: #444;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+  }
   .button-product:hover {
-    background-color: rgb(43, 218, 245);
+    background-color:  #444;
   }
   
 ::-webkit-scrollbar{
@@ -234,7 +247,7 @@ a {
 .button-product {
     align-items: center;
     background-clip: padding-box;
-    background-color: rgb(49, 187, 209);
+    background-color: #d31a2d;
     border: 1px solid transparent;
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -304,9 +317,6 @@ a {
     flex-direction: column;
     align-self: flex-start;
 }
-#pprice{
-    color: red;
-}
 
 #pdescription{
     display: flex;
@@ -328,12 +338,14 @@ a {
     width: 150px;
     padding: 10px;
     border: none;
-    background-color: rgb(49, 187, 209);
+    background-color: #d31a2d;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
-  
+.buttonp {
+    border-radius: 10px;
+}
 .buttonp:hover {
     background-color: #444;
 }
@@ -352,31 +364,77 @@ a {
 .cart-items {
     margin: 2px auto;
     min-width: 300px;
-    border: black 1px solid;
+    background-color: #ddd;
     width: 49%;
     min-height: 300px;
 }
 .cart-item {
     display: flex;
     margin: 5px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
 }
 .cart-container-right{
     margin: 2px auto;
     min-width: 300px;
-    border: black 1px solid;
+    background-color: #ddd;
     width: 49%;
 }
 .cart-description {
     margin-left: 10px;
+    width: 70%;
+}
+.cart-container-right h1 {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+.cart-container-right h1:first-child{
+    margin-top: 10px;
+}
+.cart-container-right input {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .cart-img {
     width: 75px;
     height: 75px;
     border-radius: 15px;
 }
+.cart-container-right label {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+.cart-container-right div {
+    text-align: center;
+}
+.cart-container-right button {
+    margin: 10px 20px;
+}
+.quantity {
+    color: #d31a2d;
+}
 .add-quantity-btn, .remove-quantity-btn {
     width: 20px;
     height: 20px;
+    color: white;
+    background-color: #d31a2d;
+    border: none;
+    border-radius: 5px;
+}
+.add-quantity-btn:hover, .remove-quantity-btn:hover {
+    background-color: #444;
+}
+.cart-description h2 {
+    overflow: scroll;
+    height: 40px;
+    font-size: larger;
+    padding: 0;
+}
+.quantity-container {
+    transform: translateY(-10px);
 }
 /*----- Overlay -----*/
 .overlay {
@@ -390,7 +448,7 @@ a {
     display: none;
 }
 /*----- About -----*/
-/* Add this CSS in your stylesheets or in a style tag in your component */
+
 
 .about {
     max-width: 800px;
@@ -474,7 +532,7 @@ a {
     border: 1px solid #ccc;
     font-family: Arial, sans-serif;
     margin-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 150px;
 
 }
 
@@ -525,14 +583,14 @@ a {
     margin: 0 auto;
     padding: 10px;
     border: none;
-    background-color: rgb(49, 187, 209);
+    background-color: #d31a2d;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
 .contact button:hover {
-    background-color: rgb(52, 213, 238);
+    background-color: #444;
 }
 
 .contact .status {
@@ -544,7 +602,7 @@ a {
 .footer {
     width: 100%;
     position: relative;
-    background-color: #f5f5f5; 
+    background-color: #e3e3e3; 
     color: black;
     display: flex;
     justify-content: space-around;
@@ -575,5 +633,5 @@ a {
 }
   
 .footer a:hover {
-    color: white;
+    color: #d31a2d;
 }
