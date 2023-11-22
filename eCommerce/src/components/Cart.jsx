@@ -50,6 +50,7 @@ function Cart({cartItems, updateItemQuantity, wallet, addMoneyToWallet, emptyCar
                 addMoney(value)
                 codes[codeIndex].used = !codes[codeIndex].used
             }
+            setCode("")
         }
         else {
             setMsg("Invalid Code")
@@ -70,11 +71,14 @@ function Cart({cartItems, updateItemQuantity, wallet, addMoneyToWallet, emptyCar
             <div className="cart-items">
                 {cartItems.map((item,Index) =>(
                     <div className="cart-item" key={Index}>
-                        <h2>{item.name}</h2>
-                        <h3>Price: ${item.price}</h3>
-                        <button className="add-quantity-btn" onClick={() => updateItem(item, 1)}> + </button>
-                        <span> {item.quantity} </span>
-                        <button className="remove-quantity-btn" onClick={() => updateItem(item, -1)}> - </button>
+                        <div className="cart-img" style={{backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center',}}></div>
+                        <div className="cart-description    ">
+                            <h2>{item.name}</h2>
+                            <h3>Price: ${item.price}</h3>
+                            <button className="add-quantity-btn" onClick={() => updateItem(item, 1)}> + </button>
+                            <span> {item.quantity} </span>
+                            <button className="remove-quantity-btn" onClick={() => updateItem(item, -1)}> - </button>
+                        </div>
                     </div>
                 ))}
             </div>
