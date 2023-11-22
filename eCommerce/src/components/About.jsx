@@ -21,8 +21,8 @@ function About() {
             alt="Team Member 1"
             className="team-member-image"
           />
-          <p className="team-member-name">John Doe</p>
-          <p className="team-member-role">Lead Developer</p>
+          <p className="team-member-name">Walleya Sarmona</p>
+          <p className="team-member-role">Nureyna Poleri</p>
         </div>
         <div className="team-member">
           <img
