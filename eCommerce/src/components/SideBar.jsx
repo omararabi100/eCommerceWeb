@@ -15,7 +15,7 @@ function SideBar({translateXValue, showHide}) {
                 <img src="https://static.vecteezy.com/system/resources/previews/016/016/817/non_2x/ecommerce-logo-free-png.png" className='logo-side' />
             </div>
             <div className="link-container-side">
-                <Link to="home">Home</Link>
+                <Link to="">Home</Link>
                 <Link to="about">About</Link>
                 <Link to="contact">Contact</Link>
                 <Link to="shop">Shop</Link>

@@ -8,7 +8,7 @@ function Home() {
             <div className="home-img-container"></div>
             <h2>Trending Products</h2>
             <div className="shop-row">
-                <ItemList category={"laptops"}/>
+                <ItemList category={"laptops"} featured={true}/>
             </div>
         </div>
     );

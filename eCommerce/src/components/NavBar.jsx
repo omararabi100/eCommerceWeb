@@ -8,6 +8,7 @@ function NavBar({showHide}) {
             <div className='logo-container'>
                 <img src="https://cdn-icons-png.flaticon.com/512/2099/2099192.png" className='logo-list' onClick={showHide} />
                 <img src="https://static.vecteezy.com/system/resources/previews/016/016/817/non_2x/ecommerce-logo-free-png.png" className='logo-nav' />
+                <h1 className='nav-title'> Electro</h1>
             </div>
             <div className="link-container">
                 <Link to="">Home</Link>
