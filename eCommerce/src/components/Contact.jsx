@@ -1,17 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Contact() {
+function Contact({darkMode}) {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
+    const [primaryColor, setPrimaryColor] = useState("white")
+    const [secondaryColor, setSecondaryColor] = useState("#444")
     const handleSubmit = (e) => {
         e.preventDefault()
         setName("")
         setEmail("")
         setMessage("")
     }
+    useEffect(() => {
+        if (darkMode) {
+            setPrimaryColor("#777")
+            setSecondaryColor("white")
+        }
+        else {
+            setPrimaryColor("white")
+            setSecondaryColor("#444")
+        }
+    }, [darkMode])
+    const itemStyle = {
+        backgroundColor: primaryColor,
+        color: secondaryColor
+    }
     return (
-        <div className="contact">
+        <div className="contact" style={itemStyle}>
             <h1>Contact Us</h1>
             <p> If you have any questions or feedback, please fill out the form below and we will get back to you as soon as possible.</p>
             <form onSubmit={handleSubmit}>

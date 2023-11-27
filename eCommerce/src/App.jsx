@@ -16,14 +16,25 @@ function App() {
     const [overlay, setOverlay] = useState('none')
     const [cartItems, setCartItems] = useState([]);
     const [wallet, setWallet] = useState(0)
+    const [darkMode, setDarkMode] = useState(false)
     const showHide = () => {
         if (translateXValue === 0) {
-            setTranslateXValue(-100)
+            setTranslateXValue(-100.5)
             setOverlay('none')
           } else {
             setTranslateXValue(0)
             setOverlay('block')
           }
+    }
+    const changeTheme = (state) => {
+        setDarkMode(state)
+        if (darkMode) {
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white"
+        }
+        else {
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#444"
+        }
+        console.log(darkMode)
     }
     const addToCart = (item) => {
         const tempCart = cartItems
@@ -65,20 +76,20 @@ function App() {
     }
     return (
         <div>
-            <NavBar showHide={showHide}/>
-            <SideBar showHide={showHide} translateXValue={translateXValue}/>
+            <NavBar showHide={showHide} darkMode={darkMode}/>
+            <SideBar showHide={showHide} translateXValue={translateXValue} changeTheme={changeTheme} darkMode={darkMode}/>
             <div className='content'>
                 <Routes>
-                    <Route path="/" exact element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/shop" element={<Shop />} />
-                    <Route path="/cart" element={<Cart cartItems={cartItems} updateItemQuantity={updateItemQuantity} wallet={wallet} addMoneyToWallet={addMoneyToWallet} emptyCart={emptyCart}/>}/>
-                    <Route path="/product/:id" element={<Product addToCart={addToCart} />} />
+                    <Route path="/" exact element={<Home darkMode={darkMode}/>} />
+                    <Route path="/about" element={<About darkMode={darkMode}/>} />
+                    <Route path="/contact" element={<Contact darkMode={darkMode}/>} />
+                    <Route path="/shop" element={<Shop darkMode={darkMode}/>} />
+                    <Route path="/cart" element={<Cart cartItems={cartItems} updateItemQuantity={updateItemQuantity} wallet={wallet} addMoneyToWallet={addMoneyToWallet} emptyCart={emptyCart} darkMode={darkMode}/>}/>
+                    <Route path="/product/:id" element={<Product addToCart={addToCart} darkMode={darkMode}/>} />
                 </Routes>
             </div>
-            <Footer />
-            <div className="overlay" style={{display: overlay, transition: 'transform 0.5s ease'}}></div>
+            <Footer darkMode={darkMode}/>
+            <div className="overlay" style={{display: overlay, transition: 'transform 0.5s ease'}} onClick={showHide}></div>
         </div>
     )
 }
