@@ -34,7 +34,6 @@ function App() {
         else {
             document.getElementsByTagName("body")[0].style.backgroundColor = "#444"
         }
-        console.log(darkMode)
     }
     const addToCart = (item) => {
         const tempCart = cartItems

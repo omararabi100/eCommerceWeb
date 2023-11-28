@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 function SideBar({translateXValue, showHide, changeTheme, darkMode}) {
     const [primaryColor, setPrimaryColor] = useState("white")
     const [secondaryColor, setSecondaryColor] = useState("#333")
+    const [logoColor, setLogoColor] = useState("invert(0%)")
     useEffect(() => {
         if (darkMode) {
             setPrimaryColor("#333")
             setSecondaryColor("white")
+            setLogoColor("invert(100%)")
         }
         else {
             setPrimaryColor("white")
             setSecondaryColor("#333")
+            setLogoColor("invert(0%)")
         }
     }, [darkMode])
     const setDarkMode = (e) => {
@@ -28,6 +31,9 @@ function SideBar({translateXValue, showHide, changeTheme, darkMode}) {
         borderBottom: "1px solid " + secondaryColor,
         textDecoration: "none"
     }
+    const logoStyle = {
+        filter: logoColor
+    }
     return (
         <div className='side-bar'
         style={{
@@ -37,8 +43,8 @@ function SideBar({translateXValue, showHide, changeTheme, darkMode}) {
         }}
         >
             <div className='logo-container'>
-                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099192.png" className='logo-list' onClick={showHide}/>
-                <img src="https://static.vecteezy.com/system/resources/previews/016/016/817/non_2x/ecommerce-logo-free-png.png" className='logo-side' />
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099192.png" className='logo-list' onClick={showHide} style={logoStyle}/>
+                <img src="https://static.vecteezy.com/system/resources/previews/016/016/817/non_2x/ecommerce-logo-free-png.png" className='logo-side' style={logoStyle} />
             </div>
             <div className="link-container-side">
                 <Link to="" onClick={showHide} style={itemStyleTop}>Home</Link>

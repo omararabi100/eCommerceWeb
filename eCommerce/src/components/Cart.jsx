@@ -15,7 +15,7 @@ function Cart({cartItems, updateItemQuantity, wallet, addMoneyToWallet, emptyCar
             setSecondaryColor("white")
         }
         else {
-            setPrimaryColor("white")
+            setPrimaryColor("#ccc")
             setSecondaryColor("#444")
         }
     }, [darkMode])
